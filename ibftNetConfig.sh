@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Iniciando configuração inicial da rede CarbonNet."
+echo "Iniciando configuração da rede CarbonNet..."
 
 # Envs para os diretórios:
 ROOT_DIR=$(pwd)  
@@ -37,6 +37,10 @@ for hex_dir in "$KEYS_DIR"/*; do
     fi
 done
 
-echo "Configuração inicial da rede CarbonNet finalizada."
+chmod +x ${ROOT_DIR}/run.sh
+chmod +x ${ROOT_DIR}/stop.sh
 
-# chmod +x ${ROOT_DIR}/configBootnode.sh
+echo "Configuração da rede CarbonNet finalizada com sucesso!"
+
+echo "Suba a rede com o comando: ./run.sh"
+echo "Pare a rede com o comando: ./stop.sh"
